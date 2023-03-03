@@ -11,7 +11,8 @@
     "plugin:react-hooks/recommended",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "react-app"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,6 +21,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": [
@@ -27,11 +29,15 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "jsx-a11y/img-redundant-alt": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "parser": "@typescript-eslint/parser"
 }
